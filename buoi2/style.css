@@ -130,6 +130,7 @@ header{
     margin: 50px auto;
     font-size: 3.5em;
     color: black;
+    letter-spacing: 2px;
 }
 .intro-info{
     display: flex;
