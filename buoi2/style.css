@@ -1,0 +1,187 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+body {
+    line-height: 1;
+    color:#555;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+:focus {
+    outline: 0;
+}
+ins {
+    text-decoration: none;
+}
+del {
+    text-decoration: line-through;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+a {
+     text-decoration:  none;
+}
+	
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+ 
+.clearfix {
+    clear: both;
+    display: block;
+}
+ 
+html[xmlns] .clearfix {
+    display: block;
+}
+ 
+* html .clearfix {
+    height: 1%;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/*Add your css into here*/
+.fl_left{ float: left;}
+.fl_right{ float: right;}
+body{
+    padding: 30px 40px;
+    font-family: 'Hind Siliguri', sans-serif;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+}
+.header-icon{
+    list-style: none;
+    
+}
+.header-icon li{
+    float:left;
+}
+.logo-title{
+    display: flex;
+}
+.logo-character{
+    margin: auto;
+  width: 36px;
+  text-align: center;
+  background-color: black;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  font-weight: 600;
+}
+.logo-text{
+    margin: auto 10px;
+    color: black;
+    font-weight: 600;
+    letter-spacing: 5px;
+}
+.logo-icon{
+    margin: auto 0;
+}
+.social-icon {
+    margin: auto 10px;
+    text-align: center;
+    width: 27px;
+    background-color: #f26463;
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+}
+.main-introduct{
+    display: flex;
+    margin-top: 90px;
+    justify-content: center;
+}
+
+.intro-image--img{
+    width: 450px;
+}
+
+.intro-text{
+    margin: 20px 0px 20px 100px;
+}
+.intro-text h1{
+    margin: 50px auto;
+    font-size: 3.5em;
+    color: black;
+}
+.intro-info{
+    display: flex;
+    margin-top: 90px;
+}
+.info-exp h3{
+    font-size: 2em;
+    color: #f26463;
+    margin-bottom: 10px;
+}
+.info-project{
+    margin: auto 60px;
+}
+.info-project h3{
+    font-size: 2em;
+    color: #f26463;
+    margin-bottom: 10px;
+}
+
+.info-happy h3{
+    font-size: 2em;
+    color: #f26463;
+    margin-bottom: 10px;
+}
+.about{
+    margin: 50px;
+}
+.about-title{
+    display: inline-block;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #f26463;
+    color: black;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+.description{
+    font-size: 1.2em;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 150%;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+}
+.btn-element{
+    text-decoration: none;
+    border: 2px solid #f26463;
+    background-color: white;
+    padding: 15px 30px;
+    border-radius: 60px;
+    color: #f26463;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
