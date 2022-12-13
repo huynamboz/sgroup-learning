@@ -13,11 +13,10 @@ font-family: 'Roboto', sans-serif;}
 .card{
     background-color: white;
     display: flex;
-    margin-right: 20px;
+    margin: 30px;
     border-radius: 20px;
     width: fit-content;
     box-sizing: content-box;
-    margin-top: 30px;
     max-width: 600px;
     box-shadow: 0 15px 15px 0 rgb(99 99 99 / 15%);
 }
