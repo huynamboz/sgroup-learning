@@ -1,11 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    .container {
+        height: 100px;
+        width: 100px;
+        margin: auto;
+        position: relative;
+    }
+
+    .container div:nth-child(1) {
+        height: 100px;
+        width: 100px;
+        border-right: 1px solid transparent;
+        border-bottom: 3px solid rgb(204, 245, 52);
+        border-left: 1px solid transparent;
+        border-top: 1px solid transparent;
+        border-radius: 50px;
+        position: absolute;
+        animation: rotate 1.5s infinite;
+    }
+
+    .container div:nth-child(2) {
+        height: 100px;
+        width: 100px;
+        border-right: 1px solid transparent;
+        border-bottom: 3px solid rgb(79, 189, 0);
+        border-left: 1px solid transparent;
+        border-top: 1px solid transparent;
+        border-radius: 50px;
+        position: absolute;
+        animation: rotate 1.5s infinite;
+        animation-delay: 0.2s;
+    }
+
+    .container div:nth-child(3) {
+        height: 100px;
+        width: 100px;
+        border-right: 1px solid transparent;
+        border-bottom: 3px solid rgb(16, 132, 204);
+        border-left: 1px solid transparent;
+        border-top: 1px solid transparent;
+        border-radius: 50px;
+        position: absolute;
+        animation: rotate 1.5s infinite;
+        animation-delay: 0.3s;
+    }
+
+    .container div:nth-child(4) {
+        height: 100px;
+        width: 100px;
+        border-right: 1px solid transparent;
+        border-bottom: 3px solid rgb(206, 77, 77);
+        border-left: 1px solid transparent;
+        border-top: 1px solid transparent;
+        border-radius: 50px;
+        position: absolute;
+        animation: rotate 1.5s infinite;
+        animation-delay: 0.4s;
+    }
+
+
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+
 <body>
     <div class="container">
         <div></div>
@@ -14,4 +86,5 @@
         <div></div>
     </div>
 </body>
+
 </html>
