@@ -122,6 +122,15 @@
             transform: scale(1.2);
         }
     }
+    .ring{
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        border: 3px solid aquamarine;
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent;
+        animation: rotate 1s infinite;
+    }
     @keyframes rotateY{
         from{
             transform: rotateY(0deg);
@@ -139,9 +148,13 @@
             transform: rotate(360deg);
         }
     }
+    
 </style>
 
 <body>
+    <div class="ring">
+
+    </div>
     <div class="container">
         <div></div>
         <div></div>
