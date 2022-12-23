@@ -1,17 +1,56 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    body{
+        width: 100vh;
+        height: 100vh;
+    }
+    .container{
+        background-color: beige;
+        display: inline-block;
+        padding: 20px 30px;
+        margin: auto;
+    }
+    #passs{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: block;
+        height: 30px;
+        border: none;
+    }
+    #username{
+        border: none;
+        height: 30px;
+    }
+    .button{
+        width: 100%;
+    }
+    .btn{
+        width: 100%;
+        border: none;
+        color: #fff;
+        background-color: aquamarine;
+        height: 30px;
+    }
+</style>
 <body>
-    <h1>xin chào</h1>
-    <h2>xin chào 2</h2>
-    <h3>xin chào 3</h3>
-    <i>xin chào nghiêng</i>
-    <b>xin chào đậm</b>
-    <u>xin chào gạch chân 2222</u>
+    <div class="container">
+        <div class="input">
+            <input type="text" name="username" id="username">
+            <input type="text" name="pass" id="passs">
+        </div>
+        <div class="button">
+            <button class="btn" type="submit">LOGIN</button>
+        </div>
+        <div class="text">
+            <p>forgot pass</p>
+        </div>
+    </div>
 </body>
 </html>
