@@ -647,6 +647,7 @@ footer{
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 100px 0;
 }
 .footer__item{
   margin-right: 40px;
@@ -680,4 +681,78 @@ footer{
   font-size: 1.2em;
   font-weight: 400;
   margin-bottom: 0px;
+}
+.address{
+  margin: 10px 0;
+}
+.footer__item-quotes{
+  max-width: 200px;
+  font-size: 0.8em;
+  font-weight: 200;
+  background-color: #25252e;
+  padding: 20px;
+  border-radius: 12px;
+  position: relative;
+}
+.footer__item-quotes:after {
+  top: 100%;
+  left: 36px;
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 20px 0 0;
+  border-color: rgba(0,0,0,.1) transparent transparent transparent;
+}
+a{
+  color: rgb(177, 178, 178); text-decoration: none;
+}
+a:hover{
+  color: #ff8a73;
+}
+.icon-twriter{
+  margin-top: 20px;
+  display: flex;
+}
+.quotes-title{
+  margin-top: 10px;
+}
+.quotes-page-twitter{
+  color: #fff;
+
+}
+.quotes-page-twitter:hover{
+  color: #ff8a73;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.quotes-page-twitter-detail{
+  font-size: 0.7em;
+  color: #fff;
+}
+.footer__item-down{
+  color: #fff;
+  font-size: 1.1em;
+}
+.footer__item-down--detail{
+  font-size: 0.8em;
+  color: #fff;
+  font-weight: 300;
+  margin: 20px 0;
+}
+.footer__item-down--store img{
+  margin-right: 10px;
+  width: 100px;
+}
+.end{
+  display: flex;
+  background-color: #25252e;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.8em;
+  color: #fff;
+  font-weight: 300;
 }
