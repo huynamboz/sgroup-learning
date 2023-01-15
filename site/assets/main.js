@@ -44,4 +44,42 @@ function move() {
         }
     }
 }
-move();
+
+
+function animatedHeadPhone(){
+    let headPhone = document.querySelectorAll(".slide--earphone--img");
+    for(let i=0 ; i< headPhone.length ; i++){
+        if(headPhone[i].classList.contains("animated-headphones"))
+            headPhone[i].classList.remove("animated-headphones");
+    }
+    for(let i=0 ; i< headPhone.length ; i++){
+            headPhone[i].classList.add("animated-headphones");
+    }
+}
+
+let slideHeadPhone = new IntersectionObserver((entries, observer) => { 
+    // entries : Danh sách các đối tượng chúng ta theo dỏi
+    entries.forEach(entry => {
+    // Kiểm tra ảnh của chúng ta có trong vùng nhìn thấy không
+    if(entry.isIntersecting){
+        animatedHeadPhone();     
+    }
+    });
+}, {rootMargin: "0px 0px -200px 0px"});
+
+slideHeadPhone.observe(document.getElementById("slide--earphone"));
+
+
+if(!!window.IntersectionObserver){
+    let observer = new IntersectionObserver((entries, observer) => { 
+        // entries : Danh sách các đối tượng chúng ta theo dỏi
+        entries.forEach(entry => {
+        // Kiểm tra ảnh của chúng ta có trong vùng nhìn thấy không
+        if(entry.isIntersecting){
+            move();
+        }
+        });
+    }, {rootMargin: "0px 0px -200px 0px"});
+    observer.observe(document.getElementById("progressBar"));
+}
+else console.log("not support");

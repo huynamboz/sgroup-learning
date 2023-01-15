@@ -270,12 +270,15 @@ background: linear-gradient(40deg, rgb(255, 249, 248) 40%, rgba(196,178,216,1) 1
   top: 45%;
   left: 5%;
   right: 5%;
-  flex-wrap: wrap;
+  align-items: center;
+  flex-wrap:nowrap;
 }
 .slide--earphone--img--item{
   width: 300px;
+  /* transform: translateX(100px); */
   height: 300px;
   margin: 0 10px;
+  opacity: 1;
 }
 .third__content{
   display: flex;
@@ -755,4 +758,20 @@ a:hover{
   font-size: 0.8em;
   color: #fff;
   font-weight: 300;
+}
+
+.animated-headphones{
+  transition: 0.5 linear;
+  cursor: pointer;
+  animation: slide 1s ease forwards;
+}
+@keyframes slide {
+  0% {
+    opacity: 0.5;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
