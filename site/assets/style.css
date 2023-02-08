@@ -775,3 +775,28 @@ a:hover{
     transform: translateX(0px);
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .third__content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .fifth__content{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .sixth__content{
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .seventh__list{
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .slide--earphone{
+    display: flex;
+    flex-direction: column;
+  }
+}
