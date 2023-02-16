@@ -8,7 +8,7 @@ function checkName(){
   }
     else{
         
-      localStorage.setItem("name", PERSON_NAME.value);
+        localStorage.setItem("name", PERSON_NAME.value);
     }
 }
 checkName();
