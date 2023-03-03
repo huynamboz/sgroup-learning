@@ -127,6 +127,9 @@ span,p{
     background-color: #2faa3f;
 }
 .popup-input{
+	display: flex;
+	justify-content: center;
+	align-items: center;
     position: fixed;
     width: 100vw;
     top: 0;
@@ -149,7 +152,8 @@ span,p{
     z-index: 9999;
     display: flex;
     align-items: center;
-    height: 100%;
+    height: fit-content;
+	width: fit-content;
     justify-content: center;
     /* make box-shadow */
 }
@@ -206,7 +210,7 @@ button:hover{
     display: none;
 }
 .enable{
-    display: block;
+    display: flex;
 }
 .error{
 	border: 1px solid #ff1900;
@@ -250,4 +254,23 @@ label{
 .combo{
 	display: flex;
 	justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+	.all-container{
+		flex-direction: column;
+		gap: 20px;
+	}
+	.todo-container {
+		min-width: 100%;
+	}
+	#doing-list{
+		height: auto;
+	}
+	#done-list{
+		height: auto;
+	}
+	#todo-list{
+		height: auto;
+	}
+	
 }
