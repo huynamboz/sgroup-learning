@@ -274,3 +274,11 @@ label{
 	}
 	
 }
+.shallow-draggable:hover{
+	cursor: pointer;
+}
+.dragging {
+	opacity: 0.5;
+	transition: opacity 1s ease;
+  }
+  

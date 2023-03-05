@@ -96,7 +96,7 @@ function pushTodo(){
 	if(item.type == 'todo'){
 		x++;
 		todolist.innerHTML += 
-		`<div class="todo-list">
+		`<div class="todo-list shallow-draggable" draggable="true" id="${index}">
 		<div class="todo-item">
 		<div class="todo-item-header">
 			<span class="todo-item-header-category">${item.category}</span>
@@ -120,7 +120,7 @@ function pushTodo(){
 	} else if (item.type == 'doing'){
 		y++;
 		doinglist.innerHTML += 
-		`<div class="todo-list">
+		`<div class="todo-list shallow-draggable" draggable="true" id="${index}">
 		<div class="todo-item">
 		<div class="todo-item-header">
 			<span class="todo-item-header-category">${item.category}</span>
@@ -144,7 +144,7 @@ function pushTodo(){
 	} else {
 		z++;
 		donelist.innerHTML += `
-		<div class="todo-list">
+		<div class="todo-list shallow-draggable" draggable="true" id="${index}">
 		<div class="todo-item">
                         <div class="todo-item-header">
                             <span class="todo-item-header-category">${item.category}</span>
@@ -247,4 +247,52 @@ function closeInput(){
 }
 function closeEdit(){
 	openEdit.classList.remove('enable');
+}
+
+const draggbles = document.querySelectorAll(".shallow-draggable")
+const containers = document.querySelectorAll(".draggable-container")
+
+draggbles.forEach((draggble) => {
+	//for start dragging costing opacity
+	draggble.addEventListener("dragstart", () => {
+		draggble.classList.add("dragging")
+	})
+
+	//for end the dragging opacity costing
+	draggble.addEventListener("dragend", () => {
+		draggble.classList.remove("dragging")
+	})
+})
+//shit
+let currentDragId = null;
+containers.forEach((container) => {
+	container.addEventListener("dragover", function (e) {
+		console.log("dragover",e)
+		e.preventDefault()
+		const afterElement = dragAfterElement(container, e.clientY)
+		const dragging = document.querySelector(".dragging")
+		if (afterElement == null) {
+			container.appendChild(dragging)
+		} else {
+			console.log("is",afterElement)
+			container.insertBefore(dragging, afterElement)
+		}
+	})
+})
+
+function dragAfterElement(container, y) {
+	const draggbleElements = [...container.querySelectorAll(".shallow-draggable:not(.dragging)")]
+
+	return draggbleElements.reduce(
+		(closest, child) => {
+			const box = child.getBoundingClientRect()
+			const offset = y - box.top - box.height / 2
+			if (offset < 0 && offset > closest.offset) {
+				return { offset: offset, element: child }
+			} else {
+				return closest
+			}
+		},
+		{ offset: Number.NEGATIVE_INFINITY }
+	).element
 }
